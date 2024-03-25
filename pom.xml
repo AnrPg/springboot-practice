@@ -19,6 +19,7 @@
   
 	<properties>
 		<java.version>21</java.version>
+		<start-class>com.RegasNikolas.springbootpractice.SpringBootPracticeApplication</start-class>
 	</properties>
   
 	<dependencies>
@@ -46,6 +47,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+						<mainClass>com.RegasNikolas.springbootpractice.SpringBootPracticeApplication</mainClass>
+						<layers>
+								<enabled>true</enabled>
+								<configuration>${project.basedir}/layers.xml</configuration>
+						</layers>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
